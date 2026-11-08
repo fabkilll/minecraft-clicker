@@ -33,6 +33,10 @@ h3 {
     margin-bottom: var(--standard-margin);
 }
 
+p {
+    text-align: center;
+}
+
 header p {
     margin-bottom: var(--quadrople-standard-margin);
 }
