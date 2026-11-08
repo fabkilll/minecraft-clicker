@@ -50,7 +50,7 @@ header {
     height: 250px;
     border-radius: 30px;
 
-    background: url("../assets/button_variants/grass_block.png") no-repeat center / 100% 100%;
+    background: url("../assets/button_variants/1.png") no-repeat center / 100% 100%;
     image-rendering: pixelated;
     border: none;
 
@@ -112,7 +112,7 @@ main {
     width: 110px;
     height: 110px;
     border-radius: 30px;
-    background: url("../assets/button_variants/moss_block.png") no-repeat center / 100% 100%;
+    background: url("../assets/button_variants/1.png") no-repeat center / 100% 100%;
     image-rendering: pixelated;
     transition: filter 0.3s ease, transform 0.3s ease;
     font-size: 25px;

@@ -10,13 +10,16 @@
  const rebirthButton = document.querySelector(".rebirth-button");
 
  let clicksForRebirth = 10000;
- let clicks = 0;
+ let clicks = 10000;
  let cps = 0;
  let multiplier = 1;
+
+ let buttonStyle = 1;
 
  const PICKAXE_VALUE = 100;
  const DRILL_VALUE = 1000;
  const TNT_VALUE = 10000;
+ const MAX_STYLE_VALUE = 9;
 
  /* MAIN */
  updateUI();
@@ -65,6 +68,11 @@ rebirthButton.addEventListener("click", rebirth);
          clicksForRebirth*= 2;
 
          rebirthButton.textContent = `Rebirth (${clicksForRebirth} Clicks)`;
+
+         buttonStyle++;
+         if (buttonStyle <= MAX_STYLE_VALUE) {
+             button.style.background = `url("../assets/button_variants/${buttonStyle}.png") no-repeat center / 100% 100%`;
+         }
 
          updateUI();
      }
