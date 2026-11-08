@@ -72,6 +72,7 @@ rebirthButton.addEventListener("click", rebirth);
          rebirthButton.textContent = `Rebirth (${clicksForRebirth} Clicks)`;
 
          buttonStyle++;
+
          if (buttonStyle <= MAX_STYLE_VALUE) {
              button.style.background = `url("assets/button_variants/${buttonStyle}.png") no-repeat center / 100% 100%`;
          }
