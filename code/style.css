@@ -1,0 +1,125 @@
+@import url('https://fonts.cdnfonts.com/css/minecraft-4');
+
+:root {
+    --standard-margin: 25px;
+    --double-standard-margin: 50px;
+    --triple-standard-margin: 75px;
+    --quadrople-standard-margin: 100px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    color: #F4F6F7;
+    font-family: 'Minecraft', sans-serif;
+}
+
+body {
+    background-image: url("../assets/backgrounds/overworld.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat;
+    background-attachment: fixed;
+}
+
+h1 {
+    margin-top: var(--standard-margin);
+    font-size: 50px;
+}
+
+h3 {
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: var(--standard-margin);
+}
+
+header p {
+    margin-bottom: var(--quadrople-standard-margin);
+}
+
+header {
+    text-align: center;
+}
+
+.button {
+    width: 250px;
+    height: 250px;
+    border-radius: 30px;
+
+    background: url("../assets/button_variants/grass_block.png") no-repeat center / 100% 100%;
+    image-rendering: pixelated;
+    border: none;
+
+    transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    filter: brightness(1.4) contrast(0.8);
+    transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+button:active {
+    filter: brightness(0.8) contrast(0.8);
+    transform: scale(0.9);
+    transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background: black;
+    opacity: 0.5;
+}
+
+main {
+    flex: 1;
+    min-height: 75vh;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: start;
+}
+
+.game {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.upgrades {
+    gap: 30px;
+    grid-column: 1;
+    grid-row: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.clickers {
+    gap: 30px;
+    grid-column: 3;
+    grid-row: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.clickers button, .upgrades button {
+    width: 100px;
+    height: 100px;
+    border-radius: 30px;
+    background: url("../assets/button_variants/moss_block.png") no-repeat center / 100% 100%;
+    image-rendering: pixelated;
+    transition: filter 0.3s ease, transform 0.3s ease;
+    font-size: 25px;
+}
+
+
+.clickers button {
+    margin-right: var(--double-standard-margin);
+}
+
+.upgrades button {
+    width: 200px;
+    margin-left: var(--double-standard-margin);
+}
