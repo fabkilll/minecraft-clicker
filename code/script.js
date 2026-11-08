@@ -10,7 +10,7 @@
  const rebirthButton = document.querySelector(".rebirth-button");
 
  let clicksForRebirth = 10000;
- let clicks = 10000;
+ let clicks = 0;
  let cps = 0;
  let multiplier = 1;
 
