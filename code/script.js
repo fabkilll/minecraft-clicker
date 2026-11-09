@@ -2,6 +2,7 @@
  const button = document.querySelector(".button");
  const clicksHeader = document.querySelector(".clicks");
  const multiplierHeader = document.querySelector(".multiplier");
+ const cpsParagraph = document.querySelector(".cps-para");
 
  const pickaxeButton = document.querySelector(".buy-pickaxe");
  const drillButton = document.querySelector(".buy-drill");
@@ -10,7 +11,7 @@
  const rebirthButton = document.querySelector(".rebirth-button");
 
  let clicksForRebirth = 10000;
- let clicks = 0;
+ let clicks = 100000;
  let cps = 0;
  let multiplier = 1;
 
@@ -62,6 +63,7 @@ rebirthButton.addEventListener("click", rebirth);
  function rebirth() {
      if (clicks >= clicksForRebirth) {
          cps = 0;
+         cpsParagraph.textContent = `Clicks per second: ${cps}`;
 
          multiplier*= 2;
          multiplierHeader.textContent = `Multiplier: ${multiplier}x`;
@@ -85,6 +87,8 @@ rebirthButton.addEventListener("click", rebirth);
      if (clicks >= value) {
          cps += amountofCPS * multiplier;
          clicks -= value;
+
+         cpsParagraph.textContent = `Clicks per second: ${cps}`;
          updateUI();
      }
  }
